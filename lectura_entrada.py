@@ -72,7 +72,7 @@ def main():
     g = crearGrafica(datos)
     
     tam = len(g.vertices)
-    # Crear una matriz de adyacencia
+    
     matriz = [[0 for _ in range(tam)] for _ in range(tam)]
         
     for (a,b) in g.aristas:
