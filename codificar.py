@@ -71,16 +71,24 @@ def codificar(grafica):
 
 def decodificar(codificacion):
     longitud = len(codificacion)
-
     numVer = math.floor(math.sqrt(longitud))
 
     matriz = [[0 for _ in range(numVer)] for _ in range(numVer)]
+    caracteres = list(codificacion)
+    k=0
+
+    for i in range(numVer):
+        for j in range(numVer) :
+            matriz[i][j] = int(caracteres[k])
+            k += 1
+
+   # for fila in matriz:
+   #     for columna in fila:
+   #         if caracteres[0] == '1':
+   #             fila[columna] = 1
+   #         caracteres = caracteres[1:]
     
-    for fila in matriz:
-        for columna in fila:
-            if codificacion[0] == '1':
-                fila[columna] = 1
-            codificacion = codificacion[1:]
+
 
     return matriz
     
