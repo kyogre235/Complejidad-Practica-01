@@ -3,7 +3,7 @@ import sys
 import ast
 from grafica import grafica
 import codificar
-
+import math
 def lectura_archivo(documento: str) :
     """
     Lee un archivo y devuelve una lista de líneas sin saltos de línea.
@@ -90,7 +90,7 @@ def main():
     guardar(sys.argv[2],codificacion2)
 
     print("la cantidad de vertices es: ",len(g.vertices))
-    print("la cantidad de aristas es: ",len(g.aristas))
+    print("la cantidad de aristas es: ",math.floor(len(g.aristas)/2))
 
     
 def guardar(file,codificacion):

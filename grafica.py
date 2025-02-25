@@ -22,7 +22,8 @@ class grafica:
     def agregarArista(self, v1, v2):
 
         if v1 in self.vertices and v2 in self.vertices:
-            self.aristas.add((min(v1,v2), max(v1,v2)))
+            self.aristas.add((v1,v2))
+            self.aristas.add((v2,v1))
         else:
             raise ValueError("algun vertice no es parte de la grafica")
 
