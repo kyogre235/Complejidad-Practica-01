@@ -40,7 +40,6 @@ def main():
     
     tam = len(g.vertices)
 
-
     matriz = [[0 for _ in range(tam)] for _ in range(tam)]
         
     for (a,b) in g.aristas:
