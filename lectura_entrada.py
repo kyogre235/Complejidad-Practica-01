@@ -91,6 +91,9 @@ def main():
     print("la cantidad de vertices es: ",len(g.vertices))
     print("la cantidad de aristas es: ",len(g.aristas))
 
+    newM = codificar.decodificar(codificacion2)
+    print(newM)
+
 def guardar(file,codificacion):
     """
     Guarda la codificación de la gráfica en un archivo.

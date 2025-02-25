@@ -1,3 +1,4 @@
+import math
 from grafica import grafica
 
 def codificarVertice(vertice):
@@ -66,4 +67,20 @@ def codificar(grafica):
     codificacion += codificarVertices(grafica.vertices)
     codificacion += "11"
     codificacion += codificarAristas(grafica.aristas)
-    return codificacion 
+    return codificacion
+
+def decodificar(codificacion):
+    longitud = len(codificacion)
+
+    numVer = math.floor(math.sqrt(longitud))
+
+    matriz = [[0 for _ in range(numVer)] for _ in range(numVer)]
+    
+    for fila in matriz:
+        for columna in fila:
+            if codificacion[0] == '1':
+                fila[columna] = 1
+            codificacion = codificacion[1:]
+
+    return matriz
+    
