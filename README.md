@@ -16,7 +16,7 @@ Integrantes del equipo:
 
     🔵 Arch Linux/Manjaro
     ```
-    sudo pacman -S python
+    sudo pacman -S python3
     ```
 
     🟠 Fedora
@@ -31,16 +31,25 @@ https://github.com/kyogre235/Complejidad-Practica-01.git
 ```
 ~/.../Complejidad-Practica-01
 ```
-3. Comando para ejecutar el programa copiar el siguiente comando:
+3. Comando para ejecutar el programa que genera la codificacion:
 ```
-python lectura_entrada.py archivo_a_leer archivo_a_guardar
+python3 lectura_entrada.py grafica1.txt salida.txt
 ```
 
-- `archivo_a_leer`: es un archivo `.txt` que deberá tener el siguiente formato:
+- `garfica1.txt`: es un archivo `.txt` que deberá tener el siguiente formato:
     - Primera linea del archivo: número entero positvo K.
     - Segunda línea : lista de vértices del ejemplar. `Ejemplo : [1,2,3]`.
     - Tercera línea : lista de tuplas que sería las aristas. `Ejemplo : [(1,2),(2,3)]`
+- por defecto, se tienen en esta carpeta archivos con graficas pre-codificadas guardadas en archivos llamados `grafican.txt`, como `grafica1.txt`, `grafica2.txt`, etc...
+- `salida`: nombrar el archivo `.txt` a guardar.
 
-En este programa asumimos que el ejemplar de entrada es conexo.
+4. Comando para resolver el problema del camino euleriano:
 
-- `archivo_a_guardar`: nombrar el archivo `.txt` a guardar. 
+```
+python3 lectura_entrada.py grafica1.txt euler1.txt ; python3 euleriano.py euler1.txt
+```
+
+Donde todo lo que esta antes del `;` es la llamada a la codificacion anteriormente hecha y lo demas es:
+
+- `euleriano.py` es el archivo donde se resuleve el problema
+- `euler1.txt` es donde se guardo la codificacion de la grafica en binario (nesesario para la resolver la ruta euleriana)
