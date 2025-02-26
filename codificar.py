@@ -70,6 +70,19 @@ def codificar(grafica):
     return codificacion
 
 def decodificar(codificacion):
+    """
+    Convierte una cadena de caracteres numéricos en una matriz cuadrada de adyacencia.
+
+    Parámetros:
+    -----------
+    codificacion : str
+        Cadena de caracteres con dígitos (0 y 1) que representan la matriz en forma lineal.
+
+    Retorna:
+    --------
+    matriz : list[list[int]]
+        Matriz cuadrada de adyacencia de tamaño (numVer x numVer) convertida desde la cadena.
+    """
     longitud = len(codificacion)
     numVer = math.floor(math.sqrt(longitud))
 
@@ -82,13 +95,6 @@ def decodificar(codificacion):
             matriz[i][j] = int(caracteres[k])
             k += 1
 
-   # for fila in matriz:
-   #     for columna in fila:
-   #         if caracteres[0] == '1':
-   #             fila[columna] = 1
-   #         caracteres = caracteres[1:]
-    
-
-
     return matriz
+    
     
