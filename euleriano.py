@@ -1,7 +1,6 @@
 import sys
 import codificar
-import json
- 
+import json 
 
 def camino(matriz):
     vertices_impares = 0
@@ -30,7 +29,25 @@ def leer(documento):
         for linea in archivo:
             datos.append(linea.rstrip())
     return datos
-            
+
+def pasoEu(matriz,inicio):
+    lista = []
+    
+    numV = len(matriz)
+
+    for i in range(numV):
+        for j in range(numV):
+            if matriz[i][j] == 1:
+                matriz[i][j] = 0
+                matriz[j][i] = 0
+                lista.append(i+1)
+                if j == numV-1:
+                    i=j-2
+                else:
+                    i=j
+                j=0
+    
+    return lista
 
 def main ():
     file = sys.argv[1]
@@ -38,6 +55,7 @@ def main ():
     matriz = codificar.decodificar(cadena[0])
     euleriano = camino(matriz)
     print(euleriano)
+    print(pasoEu(matriz,1))
 
 main()
 
