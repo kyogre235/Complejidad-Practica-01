@@ -32,5 +32,8 @@ class grafica:
     def numVertices(self):
         return len(self.aristas)
 
+    def esVecino(self,a,b):
+        return (a,b) in self.aristas 
+
 
 

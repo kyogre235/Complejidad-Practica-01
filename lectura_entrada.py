@@ -101,5 +101,5 @@ def guardar(file,codificacion):
     """
     with open(file,'w',encoding = 'utf-8') as archivo:
         archivo.write(codificacion)
-
-main()
+if __name__ == "__main__":
+    main()
