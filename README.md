@@ -1,6 +1,5 @@
-# Complejidad-Practica-01
+# Complejidad-Practica-02
 Integrantes del equipo:
-- Alvarado Camaho Andrea(318064343)
 - Jacome Delgado Alejandro (320011704)
 - Jimenez Sanchez Emma Alicia (320046155)
 ---
@@ -31,25 +30,24 @@ https://github.com/kyogre235/Complejidad-Practica-01.git
 ```
 ~/.../Complejidad-Practica-01
 ```
-3. Comando para ejecutar el programa que genera la codificacion:
+3. Comando para crear los certificados a partir de un archivo con la gráfica:
 ```
-python3 lectura_entrada.py grafica1.txt salida.txt
+python3 genCertificados.py grafica1.txt certificado.txt
 ```
-
+- `genCertificados.py` : es el archivo donde se genera los certificados.
 - `garfica1.txt`: es un archivo `.txt` que deberá tener el siguiente formato:
     - Primera linea del archivo: número entero positvo K.
     - Segunda línea : lista de vértices del ejemplar. `Ejemplo : [1,2,3]`.
     - Tercera línea : lista de tuplas que sería las aristas. `Ejemplo : [(1,2),(2,3)]`
 - por defecto, se tienen en esta carpeta archivos con graficas pre-codificadas guardadas en archivos llamados `grafican.txt`, como `grafica1.txt`, `grafica2.txt`, etc...
-- `salida`: nombrar el archivo `.txt` a guardar.
+- `certificado`: nombrar el archivo `.txt` a guardar el certificado.
 
-4. Comando para resolver el problema del camino euleriano:
+4. Comando para verficar el certificado cumple con ser una ruta inducida:
 
 ```
-python3 lectura_entrada.py grafica1.txt euler1.txt ; python3 euleriano.py euler1.txt
+python3 verificador.py certificado.txt grafica.txt 
 ```
 
-Donde todo lo que esta antes del `;` es la llamada a la codificacion anteriormente hecha y lo demas es:
-
-- `euleriano.py` es el archivo donde se resuleve el problema
-- `euler1.txt` es donde se guardo la codificacion de la grafica en binario (nesesario para la resolver la ruta euleriana)
+- `verficador.py` es el archivo donde se resuelve el algoritmo de verificación.
+- `certificado.txt` es el archivo donde se encuentra el certificado para la gráfica.
+- `grafica.txt` es el archivo donde se encuentran los datos de la gráfica. 

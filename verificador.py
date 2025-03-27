@@ -15,6 +15,12 @@ def main():
     certificado = leerCertificado(archivo)
     data = lector(sys.argv[2])
     g = mkGraph(data)
+    n = len(certificado)
+
+    print("Numero de Vertices: ",g.numVertices())
+    print("Numero de aristas:",g.numAristas())
+    print("Primer vertice de la ruta inducida:",certificado[0])
+    print("Ultimo vertice de la ruta inducida:",certificado[n-1])
 
     for i in range(0,len(certificado)-1):
         if not (g.esVecino(certificado[i],certificado[i+1])):

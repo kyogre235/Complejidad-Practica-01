@@ -28,10 +28,10 @@ class grafica:
             raise ValueError("algun vertice no es parte de la grafica")
 
     def numAristas(self):
-        return len(self.vertices)
+        return len(self.aristas)//2
 
     def numVertices(self):
-        return len(self.aristas)
+        return len(self.vertices)
 
     def esVecino(self,a,b):
         return (a,b) in self.aristas 
