@@ -23,7 +23,7 @@ def main():
     en una gráfica dada.
     
     Uso:
-    python script.py <archivo_certificado> <archivo_grafica>
+    python verificador.py <archivo_certificado> <archivo_grafica>
     
     Donde:
     - archivo_certificado contiene la secuencia de vértices.

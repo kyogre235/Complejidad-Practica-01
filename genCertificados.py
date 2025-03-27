@@ -28,18 +28,20 @@ def main():
     Función principal que genera un certificado aleatorio de vértices de una gráfica y lo guarda en un archivo.
     
     Uso:
-    python script.py <archivo_grafica> <archivo_salida>
+    python genCertificados.py <archivo_grafica> <archivo_salida>
     
     Donde:
     - archivo_grafica contiene la descripción del grafo.
     - archivo_salida es el nombre del archivo donde se guardará el certificado.
     """
     data = lector(sys.argv[1])
-    print(data)
+    # print("Grafica:")
+    # print(data)
     g = crearGrafica(data)
     
     certificado = random.sample(list(g.vertices),g.numero)
-    print(certificado)
+    # print("Certificado:")
+    # print(certificado)
     guardarCertificado(certificado,sys.argv[2])
     
 
