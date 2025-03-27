@@ -4,6 +4,13 @@ from lectura_entrada import lectura_archivo as lector
 from lectura_entrada import crearGrafica as mkGraph
 
 def leerCertificado(archivo):
+    """
+    Lee un archivo que contiene una línea de números enteros separados por espacios
+    y los convierte en una lista de enteros.
+    
+    :param archivo: Ruta del archivo que contiene el certificado
+    :return: Lista de enteros extraídos del archivo
+    """
     numeros = ""
     with open(archivo,'r') as f:
         linea = f.readline().strip()
@@ -11,6 +18,17 @@ def leerCertificado(archivo):
     return numeros
 
 def main():
+    """
+    Función principal que verifica si una secuencia de vértices forma una ruta inducida
+    en una gráfica dada.
+    
+    Uso:
+    python script.py <archivo_certificado> <archivo_grafica>
+    
+    Donde:
+    - archivo_certificado contiene la secuencia de vértices.
+    - archivo_grafica contiene la descripción del grafo.
+    """
     archivo = sys.argv[1]
     certificado = leerCertificado(archivo)
     data = lector(sys.argv[2])
