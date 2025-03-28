@@ -50,4 +50,11 @@ python3 verificador.py EjemplarN/certificadoN.txt EjemplarN.txt
 
 - `verficador.py` es el archivo donde se resuelve el algoritmo de verificación.
 - `EjemplarN/certificadoN.txt` es el archivo donde se encuentra el certificado para el ejemplar1.
-- `EjemplarN.txt` es el archivo donde se encuentran los datos de la gráfica. 
+- `EjemplarN.txt` es el archivo donde se encuentran los datos de la gráfica.
+- en la carpeta `EjemplarN/` se encuentran los certificados pre-codificados para poder probar el ejemplar con el mismo nombre.
+
+por ejemplo, usando el siguiente comando:
+```
+python3 verificador.py Ejemplar1/certificado1.txt Ejemplar1.txt
+```
+probamos el primer certificado del ejemplar 1.
