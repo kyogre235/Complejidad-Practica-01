@@ -22,9 +22,9 @@ Integrantes del equipo:
     ```
     sudo dnf install python3 -y
 
-1. Copiar el URL del repositorio en la carpeta a instalar el programa, con el siguiente comando:
+1. Clonar el repositorio en la carpeta a instalar el programa, con el siguiente comando:
 ```
-https://github.com/kyogre235/Complejidad-Practica-01.git
+git clone https://github.com/kyogre235/Complejidad-Practica-01.git
 ```
 2. Debe de estar ubicado en la siguiente carpeta:
 ```
@@ -32,22 +32,22 @@ https://github.com/kyogre235/Complejidad-Practica-01.git
 ```
 3. Comando para crear los certificados a partir de un archivo con la gráfica:
 ```
-python3 genCertificados.py grafica1.txt certificado.txt
+python3 genCertificados.py Ejemplar1.txt certificado.txt
 ```
 - `genCertificados.py` : es el archivo donde se genera los certificados.
-- `garfica1.txt`: es un archivo `.txt` que deberá tener el siguiente formato:
+- `Ejemplar1.txt`: es un archivo `.txt` que deberá tener el siguiente formato:
     - Primera linea del archivo: número entero positvo K.
     - Segunda línea : lista de vértices del ejemplar. `Ejemplo : [1,2,3]`.
     - Tercera línea : lista de tuplas que sería las aristas. `Ejemplo : [(1,2),(2,3)]`
-- por defecto, se tienen en esta carpeta archivos con graficas pre-codificadas guardadas en archivos llamados `grafican.txt`, como `grafica1.txt`, `grafica2.txt`, etc...
+- por defecto, se tienen en esta carpeta archivos con graficas pre-codificadas guardadas en archivos llamados `EjemplarN.txt`, como `Ejemplar1.txt`, `Ejemplar2.txt`, etc...
 - `certificado`: nombrar el archivo `.txt` a guardar el certificado.
 
 4. Comando para verficar el certificado cumple con ser una ruta inducida:
 
 ```
-python3 verificador.py certificado.txt grafica.txt 
+python3 verificador.py EjemplarN/certificadoN.txt EjemplarN.txt 
 ```
 
 - `verficador.py` es el archivo donde se resuelve el algoritmo de verificación.
-- `certificado.txt` es el archivo donde se encuentra el certificado para la gráfica.
-- `grafica.txt` es el archivo donde se encuentran los datos de la gráfica. 
+- `EjemplarN/certificadoN.txt` es el archivo donde se encuentra el certificado para el ejemplar1.
+- `EjemplarN.txt` es el archivo donde se encuentran los datos de la gráfica. 
